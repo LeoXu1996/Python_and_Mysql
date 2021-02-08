@@ -11,7 +11,7 @@ class Nstr:
         return c
 
 
-conn = pymysql.connect(host='localhost', user="casdev", password='123456', database='2020data', charset='utf8')
+conn = pymysql.connect(host='localhost', user="casdev", password='123456', database='jiahui', charset='utf8')
 cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
 sql = "select question_id from iep_question_score_rule"
 df = pd.read_sql(sql, con=conn)
